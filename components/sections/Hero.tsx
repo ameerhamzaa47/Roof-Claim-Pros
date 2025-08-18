@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, Star, Phone, MapPin, Clock } from 'lucide-react';
 
 export default function Hero() {
@@ -66,9 +67,11 @@ export default function Hero() {
     <section className="relative min-h-screen overflow-hidden">
       {/* Professional Roofing Background */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        <Image
+          src="/BG-Image.png"
           alt="Professional roofing services"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/75"></div>

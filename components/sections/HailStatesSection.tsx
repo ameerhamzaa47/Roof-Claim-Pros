@@ -61,7 +61,7 @@ export default function HailStatesSection() {
               alt="USA Map"
               width={800}
               height={400}
-              className="rounded-xl shadow-lg"
+              // className="rounded-xl shadow-lg"
               priority
             />
           </div>

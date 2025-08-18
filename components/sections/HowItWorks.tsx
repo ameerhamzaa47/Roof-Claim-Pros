@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Search, FileText, Wrench, ArrowRight, Sparkles, Zap, CheckCircle, Clock, Shield, Star } from 'lucide-react';
 
 const steps = [
@@ -16,7 +17,7 @@ const steps = [
     bgGradient: "from-blue-600/10 to-blue-500/10",
     borderColor: "border-blue-400/30",
     features: ["Professional Analysis", "Drone Technology", "Expert Assessment", "Zero Cost to You"],
-    image: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: "/process-1.png"
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const steps = [
     bgGradient: "from-blue-700/10 to-blue-600/10",
     borderColor: "border-blue-500/30",
     features: ["99.7% Approval Rate", "Zero Paperwork", "Direct Insurance Contact", "Claim Optimization"],
-    image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: "/process-2.png"
   },
   {
     id: 3,
@@ -44,7 +45,7 @@ const steps = [
     bgGradient: "from-green-600/10 to-green-500/10", 
     borderColor: "border-green-400/30",
     features: ["Premium Materials", "Licensed Contractors", "Lifetime Warranty", "Deductible Only"],
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: "/process-3.png"
   }
 ];
 
@@ -205,9 +206,11 @@ export default function HowItWorks() {
                     <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
                       {/* Image */}
                       <div className="relative h-80 overflow-hidden">
-                        <img
+                        <Image
                           src={step.image}
                           alt={step.title}
+                          width={640}
+                          height={320}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-60"></div>

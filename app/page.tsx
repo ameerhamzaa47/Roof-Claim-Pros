@@ -15,11 +15,11 @@ export default function Home() {
       <div className="min-h-screen">
         <Header />
         <Hero />
-        <Testimonials />
         <DidYouKnow />
         <HowItWorks />
         <TrustedByThousands />
         <HailStatesSection />
+        <Testimonials />
         <MoneyOnTableSection />
         <Footer />
       </div>

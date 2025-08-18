@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Shield, Award, Users, CheckCircle, Star, Clock, TrendingUp } from 'lucide-react';
 
 const trustFeatures = [
@@ -129,9 +130,11 @@ export default function TrustedByThousands() {
             <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
               {/* Main Image */}
               <div className="relative h-96 overflow-hidden">
-                <img
-                  src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                <Image
+                  src="/process-4.png"
                   alt="Professional roofing service and installation"
+                  width={800}
+                  height={384}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
