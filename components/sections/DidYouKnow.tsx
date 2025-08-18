@@ -106,16 +106,16 @@ export default function DidYouKnow() {
               </p>
             </div>
 
-            {/* Stat Section */}
-            <div className="text-center mt-auto border-t pt-4 border-gray-100">
-              <div className="text-3xl font-bold text-[#2563eb]">
-                {card.stat}
-              </div>
-              <div className="text-xs text-gray-500 font-medium leading-tight">
-                {card.statLabel}
-              </div>
-            </div>
-          </div>
+                  {/* Stat Section */}
+                  <div className="text-center mt-auto pt-4 md:pt-0 border-t border-gray-100">
+                    <div className="text-3xl font-bold text-[#2563eb]">
+                      {card.stat}
+                    </div>
+                    <div className="text-xs text-gray-500 font-medium leading-tight">
+                      {card.statLabel}
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}
