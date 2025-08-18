@@ -64,7 +64,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden py-10">
       {/* Professional Roofing Background */}
       <div className="absolute inset-0">
         <Image
@@ -161,7 +161,7 @@ export default function Hero() {
           </div>
 
           {/* Professional Form */}
-          <div className="relative order-2 lg:order-2 w-full">
+          <div className="relative order-2 lg:order-2 w-full max-h-[80vh] overflow-y-auto lg:overflow-visible">
             <div className="bg-white rounded-2xl shadow-2xl p-4">
               <div className="text-center mb-4">
                 <div className="flex items-center justify-center mb-3">
