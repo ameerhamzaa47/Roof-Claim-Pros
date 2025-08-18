@@ -104,7 +104,7 @@ export default function DidYouKnow() {
                   </div>
 
                   {/* Stat Section */}
-                  <div className="text-center mt-auto pt-4 md:pt-0 border-t border-gray-100">
+                  <div className="text-center mt-auto border-t border-gray-100">
                     <div className="text-3xl font-bold text-[#2563eb]">
                       {card.stat}
                     </div>
