@@ -72,47 +72,50 @@ export default function DidYouKnow() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {knowledgeCards.map((card, index) => {
             const IconComponent = card.icon;
-            
+
             return (
               <div
-                key={card.id}
-                className="group relative transform transition-all duration-300 hover:scale-105"
-                style={{
-                  animationDelay: `${index * 150}ms`
-                }}
+          key={card.id}
+          className="group relative transform transition-all duration-300 hover:scale-105"
+          style={{
+            animationDelay: `${index * 150}ms`
+          }}
               >
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 h-80 flex flex-col overflow-hidden">
-                  {/* Icon Section */}
-                  <div className="flex justify-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 bg-[#122E5F] rounded-2xl flex items-center justify-center shadow-lg">
-                        <IconComponent className="h-8 w-8 text-white" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg font-bold text-gray-900 text-center mb-4 px-2">
-                    {card.title}
-                  </h3>
-
-                  {/* Description - Fixed Height */}
-                  <div className="flex-grow flex items-start mb-4 px-2">
-                    <p className="text-gray-600 text-center leading-relaxed text-sm line-clamp-4">
-                      {card.description}
-                    </p>
-                  </div>
-
-                  {/* Stat Section */}
-                  <div className="text-center mt-auto pt-4 md:pt-0 border-t border-gray-100">
-                    <div className="text-3xl font-bold text-[#2563eb]">
-                      {card.stat}
-                    </div>
-                    <div className="text-xs text-gray-500 font-medium leading-tight">
-                      {card.statLabel}
-                    </div>
-                  </div>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 h-80 flex flex-col overflow-hidden">
+            {/* Icon Section */}
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <div className="w-16 h-16 bg-[#122E5F] rounded-2xl flex items-center justify-center shadow-lg">
+            <IconComponent className="h-8 w-8 text-white" />
                 </div>
+              </div>
+            </div>
+
+            {/* Title */}
+            <h3 className="text-lg font-bold text-gray-900 text-center mb-4 px-2">
+              {card.title}
+            </h3>
+
+            {/* Description - Same Height for All Cards */}
+            <div className="flex-grow flex items-center mb-4 px-2">
+              <p
+              className="text-gray-600 text-center leading-relaxed text-sm overflow-y-auto scrollbar-hide"
+              style={{ maxHeight: "64px", width: "100%" }}
+              >
+                {card.description}
+              </p>
+            </div>
+
+            {/* Stat Section */}
+            <div className="text-center mt-auto border-t pt-4 border-gray-100">
+              <div className="text-3xl font-bold text-[#2563eb]">
+                {card.stat}
+              </div>
+              <div className="text-xs text-gray-500 font-medium leading-tight">
+                {card.statLabel}
+              </div>
+            </div>
+          </div>
               </div>
             );
           })}

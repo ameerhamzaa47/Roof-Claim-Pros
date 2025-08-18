@@ -156,74 +156,74 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <ChevronLeft className="h-6 w-6 text-gray-600" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <ChevronRight className="h-6 w-6 text-gray-600" />
           </button>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-8 px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-0 md:px-8 justify-items-center">
             {getVisibleTestimonials().map((testimonial, index) => (
               <div
-                key={testimonial.id}
-                className="group relative transform transition-all duration-500 hover:scale-105"
-                style={{
-                  animationDelay: `${index * 200}ms`
-                }}
+          key={testimonial.id}
+          className="group relative transform transition-all duration-500 hover:scale-105 w-full max-w-md"
+          style={{
+            animationDelay: `${index * 200}ms`
+          }}
               >
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 h-80 flex flex-col">
-                  {/* Star Rating */}
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-5 w-5 text-[#2563eb] fill-current"
-                      />
-                    ))}
-                  </div>
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 h-80 flex flex-col">
+            {/* Star Rating */}
+            <div className="flex items-center mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star
+            key={i}
+            className="h-5 w-5 text-[#2563eb] fill-current"
+                />
+              ))}
+            </div>
 
-                  {/* Testimonial Text - Fixed Height */}
-                  <div className="min-h-[120px] flex items-start mb-6 flex-grow">
-                    <blockquote className="text-gray-700 text-lg leading-relaxed">
-                      "{testimonial.text}"
-                    </blockquote>
-                  </div>
+            {/* Testimonial Text - Fixed Height */}
+            <div className="min-h-[120px] flex items-start mb-6 flex-grow">
+              <blockquote className="text-gray-700 text-lg leading-relaxed">
+                "{testimonial.text}"
+              </blockquote>
+            </div>
 
-                  {/* Customer Info */}
-                  <div className="flex items-center justify-between mt-auto">
-                    <div className="flex items-center space-x-4">
-                      {/* Avatar */}
-                      <div className="relative">
-                        <div className="w-12 h-12 bg-[#122E5F] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                          {testimonial.avatar}
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <div className="font-bold text-gray-900 text-lg">
-                          {testimonial.name}
-                        </div>
-                        <div className="text-gray-500 text-sm">
-                          {testimonial.location}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Savings Badge - Reduced Height */}
-                    <div className="relative">
-                      <div className="bg-[#122E5F] text-white px-3 py-1.5 rounded-full font-bold text-sm shadow-lg whitespace-nowrap">
-                        Saved {testimonial.saved}
-                      </div>
-                    </div>
-                  </div>
+            {/* Customer Info */}
+            <div className="flex items-center justify-between mt-auto">
+              <div className="flex items-center space-x-4">
+                {/* Avatar */}
+                <div className="relative">
+            <div className="w-12 h-12 bg-[#122E5F] rounded-full flex items-center justify-center text-white font-bold text-sm">
+              {testimonial.avatar}
+            </div>
                 </div>
+                
+                <div>
+            <div className="font-bold text-gray-900 text-lg">
+              {testimonial.name}
+            </div>
+            <div className="text-gray-500 text-sm">
+              {testimonial.location}
+            </div>
+                </div>
+              </div>
+
+              {/* Savings Badge - Reduced Height */}
+              <div className="relative">
+                <div className="bg-[#122E5F] text-white px-3 py-1.5 rounded-full font-bold text-sm shadow-lg whitespace-nowrap">
+            Saved {testimonial.saved}
+                </div>
+              </div>
+            </div>
+          </div>
               </div>
             ))}
           </div>
@@ -232,16 +232,16 @@ export default function Testimonials() {
           <div className="flex justify-center mt-12 space-x-3">
             {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
               <button
-                key={index}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setIsAutoPlaying(false);
-                }}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'bg-[#2563eb] w-8'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+          key={index}
+          onClick={() => {
+            setCurrentIndex(index);
+            setIsAutoPlaying(false);
+          }}
+          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            index === currentIndex
+              ? 'bg-[#2563eb] w-8'
+              : 'bg-gray-300 hover:bg-gray-400'
+          }`}
               />
             ))}
           </div>
