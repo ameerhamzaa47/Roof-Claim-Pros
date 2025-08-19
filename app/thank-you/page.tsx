@@ -54,12 +54,12 @@ export default function ThankYouPage() {
         </div>
 
         {/* Refer Friends Section */}
-        <div className="text-center mb-6">
+        {/* <div className="text-center mb-6">
           <h2 className="text-xl font-bold text-gray-900 mb-2">Refer Your Friends</h2>
           <p className="text-gray-600 text-sm mb-6">
             Help your friends and family get their roofs inspected for free! Share this amazing service and help them save thousands on roof repairs.
           </p>
-        </div>
+        </div> */}
 
         {/* Referral Link */}
         <div className="mb-6">
