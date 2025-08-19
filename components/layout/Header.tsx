@@ -67,7 +67,7 @@ export default function Header() {
               </div> */}
 
               <div className="flex items-center md:space-x-4">
-                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
+                <div className="relative w-40 h-40 mt-2 sm:w-40 sm:h-40 flex-shrink-0 flex items-center justify-center">
                   <Image
                     onClick={() =>
                       scroller.scrollTo('free-inspection-form', {
@@ -82,14 +82,14 @@ export default function Header() {
                     className="object-contain cursor-pointer"
                   />
                 </div>
-                <div className="flex flex-col justify-center mt-2">
+                {/* <div className="flex flex-col justify-center mt-2">
                   <h1 className="text-base sm:text-lg md:text-xl font-bold text-[#2563eb] whitespace-nowrap">
                     RoofClaimPros
                   </h1>
                   <p className="text-[10px] sm:text-xs md:text-sm text-[#122E5F] font-medium whitespace-nowrap">
                     Professional Roofing Services
                   </p>
-                </div>
+                </div> */}
               </div>
 
 
