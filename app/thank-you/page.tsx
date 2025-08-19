@@ -66,19 +66,19 @@ export default function ThankYouPage() {
           <label className="block text-gray-700 font-semibold mb-2 text-sm">
             Your Referral Link:
           </label>
-          <div className="flex items-center space-x-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
             <input
               type="text"
               value={referralLink}
               readOnly
-              className="flex-1 px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-sm"
+              className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-sm"
             />
             <button
               onClick={handleCopyLink}
-              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm ${
-                copied 
-                  ? 'bg-green-600 text-white' 
-                  : 'bg-[#122E5F] hover:bg-[#0f2347] text-white'
+              className={`w-full sm:w-auto px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm ${
+            copied 
+              ? 'bg-green-600 text-white' 
+              : 'bg-[#122E5F] hover:bg-[#0f2347] text-white'
               }`}
             >
               {copied ? 'Copied!' : 'Copy'}
