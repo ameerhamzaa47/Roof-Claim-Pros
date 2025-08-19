@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { scroller } from 'react-scroll';
 import { Search, FileText, Wrench, ArrowRight, Sparkles, Zap, CheckCircle, Clock, Shield, Star } from 'lucide-react';
 
 const steps = [
@@ -21,7 +22,7 @@ const steps = [
   },
   {
     id: 2,
-    number: "02", 
+    number: "02",
     title: "Insurance Claim Filing",
     subtitle: "Expert Claim Management",
     description: "We handle all paperwork and work directly with your insurance company using our proprietary claim optimization system. Our 99.7% approval rate speaks for itself.",
@@ -36,13 +37,13 @@ const steps = [
   {
     id: 3,
     number: "03",
-    title: "Professional Installation", 
+    title: "Professional Installation",
     subtitle: "Premium Roof Replacement",
     description: "Top-rated local contractors install your premium new roof using the finest materials. You pay only your insurance deductible - we handle the rest completely.",
     icon: Wrench,
     color: "emerald",
     gradient: "from-green-600 to-green-500",
-    bgGradient: "from-green-600/10 to-green-500/10", 
+    bgGradient: "from-green-600/10 to-green-500/10",
     borderColor: "border-green-400/30",
     features: ["Premium Materials", "Licensed Contractors", "Lifetime Warranty", "Deductible Only"],
     image: "/process-3.png"
@@ -55,7 +56,7 @@ export default function HowItWorks() {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     // Auto-cycle through steps
     const interval = setInterval(() => {
       setActiveStep(prev => prev === 3 ? 1 : prev + 1);
@@ -83,7 +84,7 @@ export default function HowItWorks() {
             <span className="text-white font-bold text-lg tracking-wide">HOW IT WORKS</span>
             <CheckCircle className="ml-3 h-6 w-6 text-white" />
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
             <span className="text-gray-900">
               Simple 3-Step Process
@@ -93,7 +94,7 @@ export default function HowItWorks() {
               Get Your New Roof
             </span>
           </h2>
-          
+
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             We handle everything from inspection to installation - you pay only your deductible.
           </p>
@@ -106,25 +107,22 @@ export default function HowItWorks() {
               <button
                 key={step.id}
                 onClick={() => setActiveStep(step.id)}
-                className={`relative group transition-all duration-300 ${
-                  activeStep === step.id ? 'scale-105' : 'hover:scale-105'
-                }`}
+                className={`relative group transition-all duration-300 ${activeStep === step.id ? 'scale-105' : 'hover:scale-105'
+                  }`}
               >
                 {/* Step number */}
-                <div className={`relative w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl border-2 transition-all duration-300 ${
-                  activeStep === step.id 
-                    ? 'bg-[#122E5F] text-white border-[#122E5F] shadow-lg' 
+                <div className={`relative w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl border-2 transition-all duration-300 ${activeStep === step.id
+                    ? 'bg-[#122E5F] text-white border-[#122E5F] shadow-lg'
                     : 'bg-white text-gray-400 border-gray-300 group-hover:border-gray-400'
-                }`}>
+                  }`}>
                   {step.number}
                 </div>
-                
+
                 {/* Connection line */}
                 {index < steps.length - 1 && (
                   <div className="absolute top-8 left-16 w-20 h-0.5 bg-gray-300">
-                    <div className={`h-full bg-[#2563eb] transition-all duration-1000 ${
-                      activeStep > step.id ? 'w-full' : 'w-0'
-                    }`}></div>
+                    <div className={`h-full bg-[#2563eb] transition-all duration-1000 ${activeStep > step.id ? 'w-full' : 'w-0'
+                      }`}></div>
                   </div>
                 )}
               </button>
@@ -139,11 +137,10 @@ export default function HowItWorks() {
             {steps.map((step) => (
               <div
                 key={step.id}
-                className={`transition-all duration-700 ${
-                  activeStep === step.id 
-                    ? 'opacity-100 transform translate-x-0' 
+                className={`transition-all duration-700 ${activeStep === step.id
+                    ? 'opacity-100 transform translate-x-0'
                     : 'opacity-0 transform translate-x-8 absolute'
-                }`}
+                  }`}
               >
                 {activeStep === step.id && (
                   <div className="relative">
@@ -155,7 +152,7 @@ export default function HowItWorks() {
                             <step.icon className="h-8 w-8 text-white" />
                           </div>
                         </div>
-                        
+
                         <div>
                           <h3 className="text-3xl font-bold text-gray-900 mb-2">
                             {step.title}
@@ -195,11 +192,10 @@ export default function HowItWorks() {
             {steps.map((step) => (
               <div
                 key={step.id}
-                className={`transition-all duration-700 ${
-                  activeStep === step.id 
-                    ? 'opacity-100 transform translate-x-0' 
+                className={`transition-all duration-700 ${activeStep === step.id
+                    ? 'opacity-100 transform translate-x-0'
                     : 'opacity-0 transform translate-x-8 absolute inset-0'
-                }`}
+                  }`}
               >
                 {activeStep === step.id && (
                   <div className="relative group">
@@ -214,7 +210,7 @@ export default function HowItWorks() {
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-60"></div>
-                        
+
                         {/* Overlay content */}
                         <div className="absolute bottom-6 left-6 right-6">
                           <div className="inline-flex items-center bg-[#122E5F] px-4 py-2 rounded-full text-white font-bold text-sm shadow-lg">
@@ -252,7 +248,15 @@ export default function HowItWorks() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="relative inline-block">
-            <button className="bg-[#122E5F] hover:bg-[#0f2347] text-white font-bold py-6 px-12 rounded-2xl transition-all duration-300 shadow-lg text-xl">
+            <button
+              onClick={() =>
+                scroller.scrollTo('free-inspection-form', {
+                  duration: 800,
+                  delay: 0,
+                  smooth: 'easeInOutQuart'
+                })
+              }
+              className="bg-[#122E5F] hover:bg-[#0f2347] text-white font-bold py-6 px-12 rounded-2xl transition-all duration-300 shadow-lg text-xl">
               <div className="flex items-center space-x-3">
                 <Shield className="h-6 w-6" />
                 <span>Start My Free Inspection</span>
@@ -260,7 +264,7 @@ export default function HowItWorks() {
               </div>
             </button>
           </div>
-          
+
           <p className="text-gray-600 mt-6 text-lg">
             🔒 No obligation • Free consultation • Licensed professionals
           </p>

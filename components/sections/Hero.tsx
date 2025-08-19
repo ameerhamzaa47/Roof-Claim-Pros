@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import { Element } from 'react-scroll';
 import Image from 'next/image';
-import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, Star, Phone, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, Star, Phone, MapPin, Clock, Home } from 'lucide-react';
 
 export default function Hero() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -65,7 +66,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Professional Roofing Background */}
+      <Element name="free-inspection-form">
       <div className="absolute inset-0">
         <Image
           src="/BG-Image.png"
@@ -77,6 +78,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-900/75"></div>
       </div>
 
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
@@ -94,9 +96,9 @@ export default function Hero() {
                   Get Your Roof
                 </span>
                 <br />
-                <span className="text-[#2563eb]">
+                {/* <span className="text-[#2563eb]"> */}
                   100% Covered
-                </span>
+                {/* </span> */}
               </h1>
               
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl lg:block hidden">
@@ -160,13 +162,14 @@ export default function Hero() {
             </div>
           </div>
 
+          
           {/* Professional Form */}
           <div className="relative order-2 lg:order-2 w-full">
             <div className="bg-white rounded-3xl shadow-2xl p-8">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-4">
                   <div className="w-16 h-16 bg-[#122E5F] rounded-2xl flex items-center justify-center">
-                    <Shield className="h-8 w-8 text-white" />
+                    <Home className="h-8 w-8 text-white" />
                   </div>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
@@ -370,6 +373,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          
 
           {/* Mobile-only content after form */}
           <div className="lg:hidden text-white space-y-6 order-3">
@@ -435,6 +439,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      </Element>
     </section>
   );
 }

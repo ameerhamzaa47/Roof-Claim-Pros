@@ -54,7 +54,7 @@ export default function HailStatesSection() {
 
         {/* States Grid */}
         {/* USA Map Section */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center">
           <div className="relative group">
             <Image
               src="/usa-map.png"
@@ -68,11 +68,11 @@ export default function HailStatesSection() {
         </div>
 
         {/* Simple Call to Action */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <p className="text-xl text-slate-600">
             Don't see your state? Call us - we're expanding rapidly!
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -54,30 +54,43 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between h-16">
-            {/* Logo and Brand */}
+
             <div className="flex items-center space-x-4">
               {/* Replace with your logo */}
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <div className="relative w-24 h-24">
-                  {/* Replace this with your logo */}
                   <Image src="/roofing-logo.jpeg" alt="Logo" width={128} height={128} className="object-contain h-full w-full" />
                 </div>
-                {/* Company Name */}
-                {/* <div>
-                  <h1 className="text-2xl font-bold text-[#2563eb]">
+              </div> */}
+
+              <div className="flex items-center md:space-x-4">
+                <div className="relative w-20 h-20 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src="/roofing-logo.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain cursor-pointer"
+                  />
+                </div>
+                <div className="flex flex-col justify-center mt-2">
+                  <h1 className="text-base sm:text-lg md:text-xl font-bold text-[#2563eb] whitespace-nowrap">
                     RoofClaimPros
                   </h1>
-                  <p className="text-xs text-[#122E5F] -mt-1 font-medium">Professional Roofing Services</p>
-                </div> */}
+                  <p className="text-[10px] sm:text-xs md:text-sm text-[#122E5F] font-medium whitespace-nowrap">
+                    Professional Roofing Services
+                  </p>
+                </div>
               </div>
+
+
             </div>
 
             {/* Desktop Navigation Items */}
             <div className="hidden md:flex items-center">
               {/* Contractor Login */}
-              <button 
+              <button
                 onClick={() => openModal('login')}
                 className="flex items-center space-x-2 bg-[#122E5F] hover:bg-[#0f2347] text-white px-6 py-2.5 rounded-lg transition-all duration-300 font-medium shadow-sm"
               >
@@ -88,7 +101,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button 
+              <button
                 onClick={toggleMobileMenu}
                 className="text-gray-600 hover:text-blue-600 focus:outline-none p-2 rounded-lg transition-colors duration-200"
               >
@@ -105,7 +118,7 @@ export default function Header() {
           {isMobileMenuOpen && (
             <div className="md:hidden pb-4 bg-white border-t border-gray-100">
               <div className="px-4 pt-4">
-                <button 
+                <button
                   onClick={() => {
                     openModal('login');
                     setIsMobileMenuOpen(false);
@@ -122,15 +135,15 @@ export default function Header() {
       </header>
 
       {/* Modals */}
-      <LoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={closeModals} 
-        onSwitchToRegister={switchToRegister} 
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={closeModals}
+        onSwitchToRegister={switchToRegister}
       />
-      <RegisterModal 
-        isOpen={isRegisterModalOpen} 
-        onClose={closeModals} 
-        onSwitchToLogin={switchToLogin} 
+      <RegisterModal
+        isOpen={isRegisterModalOpen}
+        onClose={closeModals}
+        onSwitchToLogin={switchToLogin}
       />
     </>
   );

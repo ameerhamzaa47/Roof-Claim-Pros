@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
+import { scroller } from 'react-scroll';
 import { Shield, Award, Users, CheckCircle, Star, Clock, TrendingUp } from 'lucide-react';
 
 const trustFeatures = [
@@ -75,16 +77,16 @@ export default function TrustedByThousands() {
             <Award className="mr-2 h-5 w-5 text-[#2563eb]" />
             <span className="text-[#122E5F] font-semibold">TRUSTED PROFESSIONALS</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-gray-900">Trusted by Thousands</span>
             <br />
             <span className="text-[#2563eb]">of Homeowners</span>
           </h2>
-          
+
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our certified roofing professionals have helped over 
-            <span className="text-[#2563eb] font-semibold"> 10,000 homeowners</span> get their insurance claims approved and roofs replaced at 
+            Our certified roofing professionals have helped over
+            <span className="text-[#2563eb] font-semibold"> 10,000 homeowners</span> get their insurance claims approved and roofs replaced at
             <span className="text-[#122E5F] font-semibold"> no out-of-pocket cost</span>.
           </p>
         </div>
@@ -95,7 +97,7 @@ export default function TrustedByThousands() {
           <div className="space-y-6">
             {trustFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
-              
+
               return (
                 <div
                   key={feature.id}
@@ -138,7 +140,7 @@ export default function TrustedByThousands() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-                
+
                 {/* Overlay Badge */}
                 <div className="absolute top-6 right-6">
                   <div className="bg-[#122E5F] text-white px-6 py-3 rounded-2xl font-bold text-lg shadow-lg">
@@ -176,7 +178,7 @@ export default function TrustedByThousands() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
-              
+
               return (
                 <div
                   key={stat.id}
@@ -208,7 +210,7 @@ export default function TrustedByThousands() {
         </div>
 
         {/* Bottom CTA */}
-        {/*  <div className="text-center mt-16">
+        <div className="text-center mt-16">
           <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
             <div className="flex items-center justify-center mb-3">
               <Shield className="h-6 w-6 text-[#2563eb] mr-2" />
@@ -218,11 +220,19 @@ export default function TrustedByThousands() {
             <p className="text-gray-600 text-lg mb-6">
               Join thousands of satisfied homeowners who got their roofs replaced for free
             </p>
-            <button className="bg-[#122E5F] hover:bg-[#0f2347] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button
+              onClick={() =>
+                scroller.scrollTo('free-inspection-form', {
+                  duration: 800,
+                  delay: 0,
+                  smooth: 'easeInOutQuart'
+                })
+              }
+              className="bg-[#122E5F] hover:bg-[#0f2347] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get My Free Inspection
             </button>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
