@@ -213,7 +213,7 @@ export default function Hero() {
               </div>
 
               {/* Call to Action - Hidden on mobile, shown after form */}
-              <div className="hidden lg:block bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
+              {/* <div className="hidden lg:block bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
                 <div className="flex items-center justify-center mb-3">
                   <Phone className="h-5 w-5 text-[#2563eb] mr-2" />
                   <span className="font-bold text-lg">
@@ -221,18 +221,18 @@ export default function Hero() {
                     <span className="text-[#2563eb]"> for Immediate Service</span>
                   </span>
                 </div>
-                {/* <div className="text-center">
+                <div className="text-center">
                   <a
                     href="tel:1-800-ROOF-PRO"
                     className="text-3xl md:text-4xl font-bold text-white hover:text-[#2563eb] transition-colors"
                   >
                     1-800-ROOF-PRO
                   </a>
-                </div> */}
+                </div>
                 <div className="text-blue-200 text-sm text-center mt-2">
                   Available 24/7 for emergency roof repairs
                 </div>
-              </div>
+              </div> */}
             </div>
 
 
@@ -499,7 +499,7 @@ export default function Hero() {
               </div>
 
               {/* Mobile Call to Action */}
-              <div className="bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
+              {/* <div className="bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
                 <div className="flex items-center justify-center mb-3">
                   <Phone className="h-5 w-5 text-[#2563eb] mr-2" />
                   <span className="font-bold text-lg">
@@ -507,18 +507,18 @@ export default function Hero() {
                     <span className="text-[#2563eb]"> for Immediate Service</span>
                   </span>
                 </div>
-                {/* <div className="text-center">
+                <div className="text-center">
                   <a
                     href="tel:1-800-ROOF-PRO"
                     className="text-2xl md:text-3xl font-bold text-white hover:text-[#2563eb] transition-colors"
                   >
                     1-800-ROOF-PRO
                   </a>
-                </div> */}
+                </div>
                 <div className="text-blue-200 text-sm text-center mt-2">
                   Available 24/7 for emergency roof repairs
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

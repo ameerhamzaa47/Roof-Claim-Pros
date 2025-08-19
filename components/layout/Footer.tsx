@@ -77,7 +77,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="space-y-6">
             <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-              <Phone className="h-5 w-5 text-[#2563eb] mr-2" />
+              {/* <Phone className="h-5 w-5 text-[#2563eb] mr-2" /> */}
               Contact
             </h4>
             

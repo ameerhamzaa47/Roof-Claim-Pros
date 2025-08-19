@@ -145,7 +145,7 @@ export default function MoneyOnTableSection() {
         <div className="mb-6">
           <button className="bg-[#122E5F] hover:bg-[#0f2347] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
             <div className="flex items-center space-x-3">
-          <Phone className="h-6 w-6" />
+          {/* <Phone className="h-6 w-6" /> */}
           <span>Free Inspection for Immediate Service</span>
             </div>
           </button>
