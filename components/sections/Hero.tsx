@@ -216,7 +216,7 @@ export default function Hero() {
               <div className="hidden lg:block bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
                 <div className="flex items-center justify-center mb-3">
                   <Phone className="h-5 w-5 text-[#2563eb] mr-2" />
-                  <span className="text-[#2563eb] font-bold text-lg">Call Now for Immediate Service</span>
+                  <span className="text-[#2563eb] font-bold text-lg">Free Inspection for Immediate Service</span>
                 </div>
                 <div className="text-center">
                   <a
@@ -499,7 +499,7 @@ export default function Hero() {
               <div className="bg-[#122E5F]/20 backdrop-blur-sm border border-[#2563eb]/30 rounded-2xl p-6">
                 <div className="flex items-center justify-center mb-3">
                   <Phone className="h-5 w-5 text-[#2563eb] mr-2" />
-                  <span className="text-[#2563eb] font-bold text-lg">Call Now for Immediate Service</span>
+                  <span className="text-[#2563eb] font-bold text-lg">Free Inspection for Immediate Service</span>
                 </div>
                 <div className="text-center">
                   <a
