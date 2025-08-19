@@ -52,7 +52,7 @@ export default function LoginModal({ isOpen, onClose, onSwitchToRegister }: Logi
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[60] p-4 overflow-y-auto scrollbar-hide">
       <div className="relative my-auto">
-        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 border border-gray-200">
+        <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 border border-gray-200">
           <button
             onClick={handleClose}
             className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
