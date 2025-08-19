@@ -35,10 +35,24 @@ export default function Hero() {
         if (!/^[A-Za-z]/.test(value.trim())) return 'Last name must start with a letter.';
         return '';
       case 'phoneNumber':
-        if (
-          !/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/.test(value)
-        ) {
-          return 'Please enter a valid US phone number (e.g., (555) 123-4567).';
+        // Format input to (555) 123-4567 pattern
+        const digits = value.replace(/\D/g, '').slice(0, 10);
+        let formatted = digits;
+        if (digits.length > 6) {
+          formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+        } else if (digits.length > 3) {
+          formatted = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+        } else if (digits.length > 0) {
+          formatted = `(${digits}`;
+        }
+        if (value !== formatted) {
+          setFormData(prev => ({
+        ...prev,
+        phoneNumber: formatted
+          }));
+        }
+        if (digits.length !== 10) {
+          return 'Please enter a valid 10-digit phone number.';
         }
         return '';
       case 'email':

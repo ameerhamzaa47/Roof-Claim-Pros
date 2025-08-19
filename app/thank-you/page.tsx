@@ -42,7 +42,7 @@ export default function ThankYouPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 max-w-lg w-full">
         {/* Thank You Message */}
         <div className="text-center mb-8">
@@ -66,19 +66,19 @@ export default function ThankYouPage() {
           <label className="block text-gray-700 font-semibold mb-2 text-sm">
             Your Referral Link:
           </label>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          <div className="flex items-center space-x-2">
             <input
               type="text"
               value={referralLink}
               readOnly
-              className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-sm"
+              className="flex-1 px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-700 text-sm"
             />
             <button
               onClick={handleCopyLink}
-              className={`w-full sm:w-auto px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm ${
-            copied 
-              ? 'bg-green-600 text-white' 
-              : 'bg-[#122E5F] hover:bg-[#0f2347] text-white'
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 text-sm shadow-sm ${
+                copied 
+                  ? 'bg-green-600 hover:bg-green-700 text-white' 
+                  : 'bg-[#122E5F] hover:bg-[#0f2347] text-white'
               }`}
             >
               {copied ? 'Copied!' : 'Copy'}
@@ -90,7 +90,7 @@ export default function ThankYouPage() {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={shareOnFacebook}
-            className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Facebook className="h-4 w-4" />
             <span>Facebook</span>
@@ -98,7 +98,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareOnTwitter}
-            className="flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Twitter className="h-4 w-4" />
             <span>Twitter</span>
@@ -106,7 +106,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareViaEmail}
-            className="flex items-center justify-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Mail className="h-4 w-4" />
             <span>Email</span>
@@ -114,7 +114,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareViaSMS}
-            className="flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <MessageCircle className="h-4 w-4" />
             <span>SMS</span>
