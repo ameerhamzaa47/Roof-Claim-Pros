@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import { scroller } from 'react-scroll';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -66,8 +67,15 @@ export default function Header() {
               </div> */}
 
               <div className="flex items-center md:space-x-4">
-                <div className="relative w-20 h-20 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 flex items-center justify-center">
                   <Image
+                    onClick={() =>
+                      scroller.scrollTo('free-inspection-form', {
+                        duration: 800,
+                        delay: 0,
+                        smooth: 'easeInOutQuart'
+                      })
+                    }
                     src="/roofing-logo.png"
                     alt="Logo"
                     fill
