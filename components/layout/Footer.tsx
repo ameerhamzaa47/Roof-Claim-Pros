@@ -88,12 +88,12 @@ export default function Footer() {
                   <Phone className="h-5 w-5 text-[#2563eb]" />
                   <span className="text-[#2563eb] font-semibold">24/7 Emergency Service</span>
                 </div>
-                <a 
+                {/* <a 
                   href="tel:1-800-ROOF-PRO"
                   className="text-2xl font-bold text-white hover:text-[#2563eb] transition-colors block"
                 >
                   1-800-ROOF-PRO
-                </a>
+                </a> */}
                 <p className="text-gray-300 text-sm mt-1">
                   Available nationwide for emergency repairs
                 </p>
