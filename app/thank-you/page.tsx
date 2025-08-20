@@ -44,6 +44,14 @@ export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 max-w-lg w-full">
+        {/* Back to Home Button */}
+        <div className="mb-6">
+          <Link href="/" className="inline-flex items-center space-x-2 text-[#122E5F] hover:text-indigo-700 font-semibold text-sm rounded-lg transition-all duration-300">
+            <ArrowLeft className="h-4 w-4" />
+            <span>Back to Home</span>
+          </Link>
+        </div>
+
         {/* Thank You Message */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -52,14 +60,6 @@ export default function ThankYouPage() {
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h1>
           <p className="text-gray-600">A certified roofing expert will contact you within 15 minutes.</p>
         </div>
-
-        {/* Refer Friends Section */}
-        {/* <div className="text-center mb-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Refer Your Friends</h2>
-          <p className="text-gray-600 text-sm mb-6">
-            Help your friends and family get their roofs inspected for free! Share this amazing service and help them save thousands on roof repairs.
-          </p>
-        </div> */}
 
         {/* Referral Link */}
         <div className="mb-6">
@@ -90,7 +90,7 @@ export default function ThankYouPage() {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={shareOnFacebook}
-            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] hover:bg-[#0f2347] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Facebook className="h-4 w-4" />
             <span>Facebook</span>
@@ -98,7 +98,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareOnTwitter}
-            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] hover:bg-[#0f2347] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Twitter className="h-4 w-4" />
             <span>Twitter</span>
@@ -106,7 +106,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareViaEmail}
-            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] hover:bg-[#0f2347] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <Mail className="h-4 w-4" />
             <span>Email</span>
@@ -114,7 +114,7 @@ export default function ThankYouPage() {
 
           <button
             onClick={shareViaSMS}
-            className="flex items-center justify-center space-x-2 bg-[#122E5F] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
+            className="flex items-center justify-center space-x-2 bg-[#122E5F] hover:bg-[#0f2347] text-white px-4 py-3 rounded-lg transition-all duration-300 font-semibold text-sm shadow-sm hover:shadow-md"
           >
             <MessageCircle className="h-4 w-4" />
             <span>SMS</span>
