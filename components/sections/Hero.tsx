@@ -1,11 +1,13 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Element } from 'react-scroll';
 import Image from 'next/image';
 import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, Star, Phone, MapPin, Clock, Home } from 'lucide-react';
 
 export default function Hero() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     zipCode: '',
@@ -131,7 +133,7 @@ export default function Hero() {
 
   const handleSubmit = () => {
     console.log('Form submitted:', formData);
-    window.location.href = '/thank-you';
+    router.push('/thank-you');
   };
 
   return (
