@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Home, Users, Eye, Mail, Phone, MapPin, LogOut, Star, TrendingUp, DollarSign, Clock, Shield, User, CreditCard, Lock, Building2, FileText, Calendar } from 'lucide-react';
+import { Users, Eye, Mail, Phone, MapPin, LogOut, TrendingUp, DollarSign, Clock, Shield, User, CreditCard, Lock, Building2, } from 'lucide-react';
 
 interface Lead {
   id: string;
@@ -19,7 +19,6 @@ interface Lead {
 export default function ContractorDashboard() {
   const router = useRouter();
   const [username, setUsername] = useState('');
-  const [activeTab, setActiveTab] = useState<'my-leads' | 'available-leads'>('my-leads');
 
   useEffect(() => {
     // Check if user is logged in

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { Home, Phone, MapPin, Shield, Zap, Star, Sparkles } from 'lucide-react';
+import { Phone, Shield, Zap, Star, Sparkles } from 'lucide-react';
 
 export default function Footer() {
   return (

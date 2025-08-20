@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { scroller } from 'react-scroll';
-import { Search, FileText, Wrench, ArrowRight, Sparkles, Zap, CheckCircle, Clock, Shield, Star } from 'lucide-react';
+import { Search, FileText, Wrench, ArrowRight, CheckCircle, Shield, Star } from 'lucide-react';
 
 const steps = [
   {

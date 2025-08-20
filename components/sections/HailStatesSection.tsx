@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { MapPin, Phone, Sparkles, Shield, Zap } from 'lucide-react';
+import { Sparkles, } from 'lucide-react';
 
 const hailProneStates = [
   { name: 'Texas', color: 'blue' },

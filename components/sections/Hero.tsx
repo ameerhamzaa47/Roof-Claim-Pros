@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Element } from 'react-scroll';
 import Image from 'next/image';
-import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, Star, Phone, MapPin, Clock, Home } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, Shield, Award, MapPin, Clock, Home } from 'lucide-react';
 
 export default function Hero() {
   const router = useRouter();

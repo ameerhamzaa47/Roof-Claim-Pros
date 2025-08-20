@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { DollarSign, Clock, Award, Phone, Shield, CheckCircle } from 'lucide-react';
+import { DollarSign, Clock, Award, CheckCircle } from 'lucide-react';
 
 export default function MoneyOnTableSection() {
   return (
