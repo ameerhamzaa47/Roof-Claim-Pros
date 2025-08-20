@@ -434,10 +434,10 @@ export default function Hero() {
                       className="flex-1 bg-[#122E5F] hover:bg-[#0f2347] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       {currentStep === 3 ? (
-                        <>
+                        <span className="flex items-center space-x-2 whitespace-nowrap">
                           <Shield className="h-5 w-5" />
                           <span>Get My Free Inspection</span>
-                        </>
+                        </span>
                       ) : (
                         <>
                           <span>Continue</span>
